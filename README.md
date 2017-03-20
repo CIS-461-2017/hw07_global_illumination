@@ -170,7 +170,7 @@ Example Renders
 We have provided you one extra test scene: `PT_cornellBoxTwoLights.json`. Below
 is a render using 100 samples per pixel and a hard recursion limit of 5:
 
-![](./twolightscornellCORRECT.png)
+![](./twolightsCornellCORRECT.png)
 
 Extra credit (30 points maximum)
 -----------
