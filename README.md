@@ -105,7 +105,7 @@ throughput, along with the absolute-dot-product term and the 1/_pdf_ term. This
 effectively compounds the inherent material colors of all surfaces this ray has
 bounced from so far, so that when we incorporate the lighting this particular
 ray bounce receives _directly_, it is attenuated by __all__ of the surfaces our
-ray has previously hit. To this end, once you have your updated throughput,
+ray has previously hit. To this end, __before__ you have your updated throughput,
 multiply it with the direct lighting term from above and add the result to
 your accumulated ray color. Finally, make sure to update the ray that your
 `while` loop is using to originate from your current intersection and travel
@@ -127,10 +127,10 @@ assignment. After you compute the direct lighting and indirect lighting terms,
 compare the maximum RGB component of your throughput to a uniform random number
 and stop your `while` loop if said component is smaller than the random number.
 Most importantly, to keep your path tracer mathematically correct, you must then
-divide your throughput by the maximum component of your throughput; this scales
-up the contribution of this ray path proportionally to how likely the path is
-to terminate so that we are still accounting for the contribution that paths
-that _were_ terminated earlier would have had.
+divide your throughput by the random number you compared to your throughput;
+this scales up the contribution of this ray path proportionally to how likely
+the path is to terminate so that we are still accounting for the contribution
+that paths that _were_ terminated earlier would have had.
 
 Custom scenes (30 points)
 -----------
