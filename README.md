@@ -127,7 +127,7 @@ assignment. After you compute the direct lighting and indirect lighting terms,
 compare the maximum RGB component of your throughput to a uniform random number
 and stop your `while` loop if said component is smaller than the random number.
 Most importantly, to keep your path tracer mathematically correct, you must then
-divide your throughput by the random number you compared to your throughput;
+divide your throughput by the max component of your throughput;
 this scales up the contribution of this ray path proportionally to how likely
 the path is to terminate so that we are still accounting for the contribution
 that paths that _were_ terminated earlier would have had.
